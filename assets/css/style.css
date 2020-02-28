@@ -118,6 +118,13 @@ header .wrapper ,
   display: flex;
 }
 
+h2 {
+  color: #fff;
+  letter-spacing: -2px;
+  font-size: 45px;
+  font-weight: bold;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
@@ -290,7 +297,7 @@ h1 { flex-basis: 10%; }
 
 nav + ul li:last-child a {
   padding: 10px 24px;
-  border : 1px solid #121411;
+  border : 1px solid transparent;
   border-radius : 24px;
   background: #fff;
   color: #121411;
@@ -303,7 +310,7 @@ nav + ul li:first-child a:before {
   content: "\f0ac";
   margin-right: 40%;
   float: right;
-  color: #000;
+  color: #fff;
   font : 25px fontAwesome;
   text-indent: 0; 
 }
@@ -321,7 +328,35 @@ nav + ul li:first-child a:before {
 
 .banner .wrapper { 
   width: 100%; 
+  padding-bottom: 696px;
   position: relative;
+  background: url('https://via.placeholder.com/1283x701.png/50585d');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner ul { 
+  position: absolute; 
+  left: 50%;
+  transform: translate(-50%,14%);
+}
+
+.banner-text {
+  width: 100%;
+  position: absolute;
+  left : 1%;
+  top : 7%;
+  text-align: center;
+}
+
+.banner-text a {
+  padding: 19px 45px;
+  border : 1px solid transparent;
+  border-radius: 80px;
+  margin-top: 46px;
+  background: #fff;
+  color: #679cd4 ;
+  font-size: 19px;
 }
 
 /*banner styling end here*/
@@ -360,6 +395,22 @@ nav + ul li:first-child a:before {
     background: #fff;
     color: #426eff
   }
+
+  nav a:hover,
+  nav + ul li:first-child a:hover::before { color: #69bde4; }
+
+  nav + ul li:last-child a:hover {
+    border : 1px solid #121411;
+    background: #121411;
+    color: #fff;
+  } 
+
+  .banner-text a:hover {
+    border: 1px solid #fff;
+    background: #679cd4;
+    color: #fff;
+  }
+
 }
 
 /*media query for 995px starts here*/
