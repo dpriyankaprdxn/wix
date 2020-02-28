@@ -112,7 +112,8 @@ li {
 /*common styling*/
 
 header .wrapper ,
-.menu { 
+.menu,
+.designFreedom ul{ 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,6 +124,37 @@ h2 {
   letter-spacing: -2px;
   font-size: 45px;
   font-weight: bold;
+}
+
+h3 {
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+h3 span { text-transform: lowercase; }
+
+p {
+  padding-left: 5%;
+  margin-bottom: 35px;
+  color: #505256;
+  font-size: 22px;
+  line-height : 36px;
+  letter-spacing: -1px;
+}
+
+.getStarted {
+  padding-bottom: 7px;
+  border-bottom: 2px solid #c0c0c0;
+  color: #1a2f52;
+  font-size: 22px;
+}
+
+.getStarted:before {
+  content: "\f105";
+  margin-left: 6px;
+  float: right;
+  font: 25px fontAwesome;
 }
 
 /*=================================
@@ -361,11 +393,16 @@ nav + ul li:first-child a:before {
 
 /*banner styling end here*/
 
+.designFreedom .wrapper { 
+  width: 90%; 
+  padding: 179px 0;
+}
 
+.designFreedom ul{ justify-content: space-between; }
 
+.designFreedom li { flex-basis: 45%; }
 
-
-
+.designFreedom .getStarted { margin-left: 5%; } 
 /*=================================
   main styling ends here
 =================================*/
@@ -397,7 +434,8 @@ nav + ul li:first-child a:before {
   }
 
   nav a:hover,
-  nav + ul li:first-child a:hover::before { color: #69bde4; }
+  nav + ul li:first-child a:hover::before ,
+  .getStarted:hover { color: #69bde4; }
 
   nav + ul li:last-child a:hover {
     border : 1px solid #121411;
