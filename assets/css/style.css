@@ -113,7 +113,8 @@ li {
 
 header .wrapper ,
 .menu,
-.designFreedom ul{ 
+.designFreedom ul,
+.wixInformation ul { 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,7 +136,6 @@ h3 {
 h3 span { text-transform: lowercase; }
 
 p {
-  padding-left: 5%;
   margin-bottom: 35px;
   color: #505256;
   font-size: 22px;
@@ -155,6 +155,12 @@ p {
   margin-left: 6px;
   float: right;
   font: 25px fontAwesome;
+}
+
+h4 {
+  font-size: 44px;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 /*=================================
@@ -393,6 +399,8 @@ nav + ul li:first-child a:before {
 
 /*banner styling end here*/
 
+/*designFreedom styling start*/
+
 .designFreedom .wrapper { 
   width: 90%; 
   padding: 179px 0;
@@ -403,6 +411,46 @@ nav + ul li:first-child a:before {
 .designFreedom li { flex-basis: 45%; }
 
 .designFreedom .getStarted { margin-left: 5%; } 
+
+.designFreedom p {  padding-left: 5%; }
+
+/*designFreedom section styling end*/
+
+/*wixInformation section styling start*/
+
+.wixInformation .wrapper { width: 99%; }
+
+.wixInformation ul:first-child {  border: 2px solid #000;  }
+
+.wixInformation ul:first-child li:first-child { 
+  box-sizing: border-box;
+  flex-basis: 50%; 
+  padding: 174px 8% 0;
+}
+
+.wixInformation p:first-of-type {
+  margin-top: 6px;
+  font-size: 44px;
+  text-transform : capitalize;
+}
+
+.wixInformation p:last-of-type {  font-size: 18px;  }
+
+.wixInformation ul:nth-child(2) li {
+  flex-basis: 50%;
+  border: 2px solid #000;
+  border-top : none;
+}
+
+.wixInformation ul:nth-child(2) li:not(:first-child) { border-left : none;  }
+
+.wixInformation ul:nth-child(2) div{
+  box-sizing: border-box;
+  padding: 65px 16% 0;
+}
+
+/*wixInformation section styling end*/
+
 /*=================================
   main styling ends here
 =================================*/
