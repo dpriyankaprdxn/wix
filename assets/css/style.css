@@ -114,7 +114,11 @@ li {
 header .wrapper ,
 .menu,
 .designFreedom ul,
-.wixInformation ul { 
+.wixInformation ul,
+.feature ul,
+.allFeatures ul ,
+.howToCreateWebsite ul:nth-child(1),
+.footerContainer { 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,6 +165,20 @@ h4 {
   font-size: 44px;
   font-weight: bold;
   text-transform: capitalize;
+}
+
+h5 {
+  font-size: 23px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+h6 {
+  margin-bottom: 30px;
+  color: #434f59;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /*=================================
@@ -418,6 +436,8 @@ nav + ul li:first-child a:before {
 
 /*wixInformation section styling start*/
 
+.wixInformation h3 { color: #030c21; }
+
 .wixInformation .wrapper { width: 99%; }
 
 .wixInformation ul:first-child {  border: 2px solid #000;  }
@@ -431,6 +451,7 @@ nav + ul li:first-child a:before {
 
 .wixInformation p:first-of-type {
   margin-top: 6px;
+  color: #000;
   font-size: 44px;
   text-transform : capitalize;
 }
@@ -450,7 +471,180 @@ nav + ul li:first-child a:before {
   padding: 65px 16% 0;
 }
 
+.wixInformation li:last-child a { margin-bottom: 67px; }
+
 /*wixInformation section styling end*/
+/*feature section styleing start*/
+
+.feature {  margin-top : 225px; }
+
+.feature ul { 
+  margin-bottom: 130px;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+.feature figure { 
+  margin-bottom : 28px;
+  display: inline-block; 
+}
+
+.feature h3 {
+  width : 66%;
+  margin : 0 auto 131px;
+  text-align: center;
+}
+
+.feature li { flex-basis : 34%; }
+
+.feature li:nth-child(1) { padding-left: 3%; }
+
+.feature li:nth-child(1) div { padding-left: 7%; }
+
+.feature li:nth-child(2) { margin : 27px 4% 0 0; }
+
+.feature li:nth-child(3) figure { float: right; }
+
+.feature li:nth-child(3) div { 
+  float: right; 
+  padding-left: 29%;
+}
+
+.feature li:nth-child(4) { 
+  flex-basis: 50%; 
+  margin: 113px 0 73px;
+}
+
+.feature li:nth-child(5),
+.feature li:nth-child(6) {  flex-basis: 45%; }
+
+
+.feature li:nth-child(4) figure { 
+  margin-bottom: 60px;
+  box-shadow: 22px 25px 0px 4px #f7bb50;
+}
+
+.feature li:nth-child(5) figure {     box-shadow: 32px -21px 0px 1px #e92f3c; }
+
+.feature li:nth-child(6) { margin-top: 60px; }
+
+.feature li:nth-child(4) img,
+.feature li:nth-child(5) img {  box-shadow: 5px 7px rgb(215,215,215,0.5); }
+
+
+.feature p {
+  width: 87%;
+  margin-bottom: 0;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: -1px;
+}
+
+.feature li:nth-child(2) p { width: 77%; }
+
+.feature li:nth-child(3) p { width: 100%; }
+
+.feature li:nth-child(4) p { width: 70%; }
+
+.feature li:nth-child(5) p { width: 61%; }
+
+.feature li:nth-child(6) p { width: 56%; }
+
+/*feature secion styling end*/
+/*allfeatures section styling start*/
+
+.allFeatures .wrapper { width : 100%; }
+
+.allFeatures ul { justify-content : space-between; }
+
+.allFeatures li:first-child { 
+  flex-basis :52%; 
+  padding-left: 8%;
+}
+
+.allFeatures li:last-child { 
+  flex-basis :29%; 
+  position: relative;
+}
+
+.allFeatures figure {   display : inline-block; }
+
+.allFeatures h3 {
+  width : 33%;
+  border-bottom : 3px solid #000;
+  margin : 0 auto 213px;
+  font-size : 44px;
+  text-align : center;
+}
+
+.allFeatures h3:after {
+  content : "\f101";
+  margin-left : 10px;
+  font-family : fontAwesome;
+}
+
+.allFeatures h4 { 
+  width: 73%; 
+  margin-bottom: 30px;
+}
+
+.allFeatures .getStarted { margin: 1px 0 110px; }
+
+/*allfeature section styling end*/
+/*howToCreateWebsite section styling start */
+
+.howToCreateWebsite { 
+  padding: 182px 0 175px;
+  background: #526dd8; 
+  color: #fff;
+}
+
+.allFeatures figure:last-child {
+  position: absolute;
+  top: 7%;
+  left: -19%;
+}
+
+/*howToCreateWebsite section styling end*/
+
+.howToCreateWebsite ul:nth-child(1) { justify-content: space-between; }
+
+.howToCreateWebsite ul:nth-child(1) li {   flex-basis: 44%; }
+
+.howToCreateWebsite h3 {
+  padding-left: 1%;
+  margin-bottom: 97px;
+  font-size: 109px;
+}
+
+.howToCreateWebsite h5 { 
+  padding-bottom: 34px;
+  margin-bottom :42px;
+  position: relative;
+  line-height: 31px; 
+}
+
+.howToCreateWebsite h5:before { 
+  content: '';
+  width: 40px;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.connectedUs a {  color: #fff; }
+
+.connectedUs li {  margin-right: 9%; }
+
+.websiteBuilderSteps li {
+  padding-left: 3%;
+  margin-bottom : 19px;
+  display : list-item;
+  list-style-type: decimal;
+  font-size: 20px;
+  line-height: 31px;
+}
+
 
 /*=================================
   main styling ends here
@@ -460,11 +654,68 @@ nav + ul li:first-child a:before {
   footer styling starts here
 =================================*/ 
 
+footer {  padding: 95px 0 225px; }
 
+footer .wrapper { width: 78%; }
 
+.footerContainer li { flex-basis: 19%; }
 
+.footerContainer li:last-child { flex-basis: 24%; }
 
+.footerContainer li { 
+  margin-bottom: 8px;
+  display: block; 
+}
 
+footer a {
+  padding: 2px;
+  color: #626c73;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+footer p { 
+  margin-bottom: 12px;
+  color: #626c73;
+  font-size: 15px; 
+  line-height: 22px;
+}
+
+footer span { 
+  color: #626c73;
+  font-size: 15px; 
+}
+
+.socialLinksIcons { margin-top: 22px; }
+
+.socialLinksIcons li { display: inline-block; }
+
+.socialLinksIcons a {
+  margin-right: 2%;
+  color: #46515c;
+  text-indent: -9999px;
+}
+
+.socialLinksIcons a:before {
+  float: right;
+  text-indent: 0;
+  font : 20px fontAwesome;
+
+}
+
+.socialLinksIcons .facebook:before {  content: '\f09a'; }
+
+.socialLinksIcons .twitter:before {  content: '\f099'; }
+
+.socialLinksIcons .googlePlus:before {  content: "\f0d5"; }
+
+.socialLinksIcons .youtube:before {  content: '\f16a'; }
+
+.socialLinksIcons .pinterest:before {  content: '\f231'; }
+
+.socialLinksIcons .instagram:before {  content: '\f16d'; }
+
+.socialLinksIcons .linkedin:before {  content: '\f0e1'; }
 
  /*=================================
   footer styling ends here
@@ -498,6 +749,7 @@ nav + ul li:first-child a:before {
     color: #fff;
   }
 
+  footer a:hover { color: #000; }
 }
 
 /*media query for 995px starts here*/
