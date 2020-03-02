@@ -371,6 +371,7 @@ nav + ul li:first-child a:before {
   text-indent: 0; 
 }
 
+.showhide { display: block; }
 
 /*=================================
   Header styling ends here
@@ -759,6 +760,8 @@ footer span {
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
+  header .wrapper { position: relative; }
+
   h4 { font-size: 42px; }
 
   h3 { font-size: 50px; }
@@ -768,7 +771,21 @@ footer span {
     background: #fff; 
   }
 
-  nav { display: none; }
+  nav { 
+    width: 100%;
+    display: none; 
+    position: absolute;
+    top: 40px;
+    background: #fff;
+  }
+ 
+  nav a { color: #000; }
+
+  nav li {
+    padding: 7px 3%;
+    display: block;
+    text-align: center;
+  }
 
   nav + ul { display : none; }
 
