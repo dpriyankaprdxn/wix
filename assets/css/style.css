@@ -601,7 +601,7 @@ nav + ul li:first-child a:before {
 
 .allFeatures figure:last-child {
   position: absolute;
-  top: 7%;
+  top: 6%;
   left: -19%;
 }
 
@@ -645,6 +645,10 @@ nav + ul li:first-child a:before {
   line-height: 31px;
 }
 
+.feature ul .slick-dots {
+  margin: 0;
+  display: block; 
+}
 
 /*=================================
   main styling ends here
@@ -755,6 +759,141 @@ footer span {
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
+  h4 { font-size: 42px; }
 
+  h3 { font-size: 50px; }
+  
+  .banner .wrapper { 
+    padding-bottom: 900px;
+    background: #fff; 
+  }
+
+  nav { display: none; }
+
+  nav + ul { display : none; }
+
+  .menu { justify-content: flex-end; }
+
+  .hamburger { display: block; }
+
+  .banner ul { 
+   width: 100%;  
+   transform: translate(-50%,9%);
+ }
+
+  .banner li:first-child { width: 100%; }
+
+  .wixInformation p:last-of-type {  
+    font-size: 16px;
+    line-height: 31px; 
+  }
+
+  .wixInformation ul:first-child li:first-child {  padding: 50px 8% 0; }
+
+  .wixInformation p:first-of-type { 
+    margin-bottom : 18px;
+    font-size: 40px;
+    line-height : 45px; 
+  }
+}  
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 767px) {
+
+  .wixInformation ul:first-child { 
+    flex-direction: column-reverse; 
+    border : none;
+  }
+
+  .wixInformation ul:first-child img { max-width: 636px; }
+
+  .wixInformation ul:first-child li:last-child { margin: 0 auto; }
+
+  .wixInformation ul:nth-child(2) li { 
+    border : none; 
+    margin-bottom: 50px;
+  }
+
+  .wixInformation ul,
+  .howToCreateWebsite ul:nth-child(1),
+  .designFreedom ul { flex-direction: column; }
+
+  .wixInformation img { max-width: 634px; }
+
+  .wixInformation figure { text-align: center; }
+
+  .wixInformation ul:nth-child(2) div { padding: 59px 9% 0; }
+
+  .feature { margin-top: 0; }
+
+  .feature h3 { width: 95%; }
+  
+  .feature li:nth-child(n) { 
+    margin : 0;
+    padding: 0;
+  }
+
+  .feature li:nth-child(n) { flex-basis: 100%; }
+
+  .feature li:nth-child(n) p {  
+    width: 70%;
+    margin: 0 auto; 
+  }
+
+  .feature li:nth-child(3) figure { float: none; }
+  
+  .feature div { text-align: center; }
+
+  .feature li:nth-child(n) div {
+    padding: 0;
+    float: none;
+  }
+
+  .feature li:nth-child(4) figure ,
+  .feature li:nth-child(4) img {   box-shadow: none;}
+
+  .feature li:nth-child(5) figure {   box-shadow: 22px 25px 0px 4px #f7bb50;}
+
+  .feature li:nth-child(6) figure {     box-shadow: 32px -21px 0px 1px #e92f3c; }
+
+  .feature li:nth-child(5) img,
+  .feature li:nth-child(6) img {  box-shadow: 5px 7px rgb(215,215,215,0.5); }
+
+
+  .allFeatures h3 {
+    width: 65%;
+    margin: 0 auto 40px;
+    font-size : 38px;
+  }
+
+  .allFeatures ul { 
+    padding-top: 65PX;
+    margin-bottom: 120px;
+    border-top: 1PX solid #000;
+    flex-direction: column;
+ }
+
+ .allFeatures .wrapper { width: 86%; }
+
+ .allFeatures li:first-child { padding-left: 0; }
+
+ .allFeatures li:last-child { margin: 0 auto; }
+
+ .allFeatures figure:last-child { top: 19%; }
+
+ .howToCreateWebsite h3 { font-size: 88px; }
+
+ .howToCreateWebsite h5 { 
+    margin: 42px 0; 
+   font-weight: normal;
+  }
+
+  .footerContainer { flex-wrap: wrap; }
+
+  .footerContainer li { flex-basis: 49%; }
+
+  .designFreedom p { padding-left: 0; }
+
+  .designFreedom .getStarted { margin-left: 0; }
 
 }  
