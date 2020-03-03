@@ -1,16 +1,5 @@
 $(window).on('load',function() {
   
-  $(window).resize(resize);
-  resize();
- 
- 	$('.one').slick({
-		dots: true,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 1,arrows: false,
-		adaptiveHeight: false
-	});
-
  	$('nav a').on('click',function() {
 		if(!$(this).hasClass('active')) {
       $("nav .active").removeClass("active");
@@ -22,12 +11,51 @@ $(window).on('load',function() {
   	$('nav').toggleClass('showhide');
     $(".hamburger").toggleClass('open');
 	});
-	
+
+	$('.signin').on('click', function(e) {
+		e.preventDefault();
+		$('.modal').show();
+		$('html').addClass('overflow');
+
+	});
+
+	$('.modal').on('click' , function(e) {
+		if(!$(e.target).is('.modal-content')) {
+			$('html').removeClass('overflow');
+			$('.modal').hide();
+		}
+	});
+
+	$('.close').on('click' , function() {
+		$('html').removeClass('overflow');
+		$('.modal').hide();
+	});
+
 });
 
-function resize() {
-  if ($(window).width() <= 767) {
-   $('.feature ul').addClass('one');
-  }
-  else {$('.feature ul').removeClass('one');}
-}
+$(window).on('load resize', function(){
+	if($(window).width() < 768) {
+	  $('.features-slider').not('.slick-initialized').slick({
+			dots: true,
+			customPaging: function(slider, i) {
+	      return '<span class="dots"></span>';
+	    },
+			infinite: true,
+			speed: 300,
+			arrows: false,
+			adaptiveHeight: false,
+			responsive: [
+	      {
+	        breakpoint: 9999,
+	        settings: "unslick"
+	      },
+	      {
+	        breakpoint: 767,
+	        settings: {
+	          slidesToShow: 1
+	        }
+	      }
+      ]
+		});
+	}
+})
